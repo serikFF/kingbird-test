@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MarsPhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fat-oq-iue">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qzs-b0-1Af">
+                                    <size key="itemSize" width="116" height="111"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCellReuseID" id="5PL-e0-FKH" customClass="PhotoCollectionViewCell" customModule="MarsPhotoViewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="111"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6iU-pW-1VN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="111"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="6iU-pW-1VN" firstAttribute="top" secondItem="5PL-e0-FKH" secondAttribute="top" id="TqT-nY-CsS"/>
+                                            <constraint firstItem="6iU-pW-1VN" firstAttribute="leading" secondItem="5PL-e0-FKH" secondAttribute="leading" id="Xix-Dl-zVG"/>
+                                            <constraint firstAttribute="trailing" secondItem="6iU-pW-1VN" secondAttribute="trailing" id="jCa-xR-DRX"/>
+                                            <constraint firstAttribute="bottom" secondItem="6iU-pW-1VN" secondAttribute="bottom" id="uaY-4c-Mxz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="ibImageView" destination="6iU-pW-1VN" id="HhW-nQ-wYg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActivityIndicatorCollectionReusableViewReuseID" id="Ogq-uh-j6e" customClass="ActivityIndicatorCollectionReusableView" customModule="MarsPhotoViewer" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="111" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OvF-1l-XNE">
+                                            <rect key="frame" x="170.5" y="8" width="34" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="OvF-1l-XNE" secondAttribute="height" multiplier="1:1" id="p9M-Yw-XG7"/>
+                                            </constraints>
+                                            <color key="color" red="0.0" green="0.56762840850213836" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OvF-1l-XNE" firstAttribute="centerX" secondItem="Ogq-uh-j6e" secondAttribute="centerX" id="7o4-iy-Bws"/>
+                                        <constraint firstItem="OvF-1l-XNE" firstAttribute="centerY" secondItem="Ogq-uh-j6e" secondAttribute="centerY" id="YKt-zj-wl0"/>
+                                        <constraint firstAttribute="bottom" secondItem="OvF-1l-XNE" secondAttribute="bottom" constant="8" id="elt-jr-Ba3"/>
+                                        <constraint firstItem="OvF-1l-XNE" firstAttribute="top" secondItem="Ogq-uh-j6e" secondAttribute="top" constant="8" id="iz2-Ov-GUW"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="ibActivityIndicator" destination="OvF-1l-XNE" id="6oI-cy-sAi"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fat-oq-iue" secondAttribute="bottom" id="0SS-Gw-Ag7"/>
+                            <constraint firstItem="fat-oq-iue" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HG7-cX-igu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fat-oq-iue" secondAttribute="trailing" id="e4V-Eq-YZe"/>
+                            <constraint firstItem="fat-oq-iue" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gC0-VQ-Rxs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ibCollectionView" destination="fat-oq-iue" id="OYc-CI-mDW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
